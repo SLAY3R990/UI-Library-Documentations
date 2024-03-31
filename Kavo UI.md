@@ -83,3 +83,39 @@ Section:NewLabel("LabelText")
 String 1: What the label says.
 ]]--
 ```
+
+## Creating a Toggle
+This creates a switch in the GUI that you can make do something.
+
+```lua
+Section:NewToggle("ToggleText", "ToggleInfo", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+
+--[[
+String 1: Name of the toggle.
+String 2: Description of the toggle.
+Function 1: What the toggle does.
+String 3: What the console says when it is switched on.
+String 4: What the console says when it is switched off.
+]]--
+```
+
+## Creating a Slider
+This will create a slider that you can use to control something.
+
+```lua
+Section:NewSlider("SliderText", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+--[[
+self explanatory
+]]--
+```
+
+
+
